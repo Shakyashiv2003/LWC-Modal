@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title=" MODAL IN LWC">
+        <lightning-datatable key-field="id" data={data} columns={columns} onrowaction={handleRowAction} hide-checkbox-column="true" default-sort-direction="asc"></lightning-datatable>   
+    </lightning-card>
+    
+    <c-lwc_modal-content
+        is-open={isModalOpen}
+        modal-title={modalTitle}
+        modal-content={modalContent}
+        onclose={handleModalClose}>
+    </c-lwc_modal-content>
+</template>
